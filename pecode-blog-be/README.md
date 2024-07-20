@@ -3,17 +3,19 @@
 
 ## 1. Backend
 
-1. cp .env.example .env
-2. npm i
-3. npm run db:create
-4. npm run migration:run
-5. npm run test (optional)
-6. npm run start
+1. cd pecode-blog-be
+2. cp .env.example .env
+3. npm i
+4. npm run db:create
+5. npm run migration:run
+6. npm run test (optional)
+7. npm run start
 
 ## 2. Frontend
 
-1. cp .env.example .env
-2. npm i
-3. npm run build && npm start
+1. cd pecode-blog-ui
+2. cp .env.example .env
+3. npm i
+4. npm run build && npm start
 
 ### Swagger - http://localhost:4000/api#/
