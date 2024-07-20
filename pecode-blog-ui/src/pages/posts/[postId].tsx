@@ -42,20 +42,10 @@ export default function PostPage({ post }: Props) {
   );
 }
 
-export const getStaticProps: GetStaticProps = async ({ params }) => {
+export const getServerSideProps: GetStaticProps = async ({ params }) => {
   const post = await api.posts.get(params?.postId as string);
 
   return {
     props: { post },
   };
 };
-
-export async function getStaticPaths() {
-  const posts = await api.posts.list();
-
-  const paths = posts.map((post) => ({
-    params: { postId: post.id },
-  }));
-
-  return { paths, fallback: 'blocking' };
-}
