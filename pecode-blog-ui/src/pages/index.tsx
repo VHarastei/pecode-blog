@@ -51,7 +51,7 @@ export default function Posts({ posts }: Props) {
   );
 }
 
-export const getStaticProps = async () => {
+export const getServerSideProps = async () => {
   const posts = await api.posts.list();
 
   return {
